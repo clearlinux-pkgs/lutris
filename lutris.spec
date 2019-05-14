@@ -4,10 +4,10 @@
 #
 Name     : lutris
 Version  : 0.5.2
-Release  : 1
+Release  : 2
 URL      : https://github.com/lutris/lutris/archive/v0.5.2.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.2.tar.gz
-Summary  : Install and play any video game easily
+Summary  : Open Gaming Platform
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
 Requires: lutris-bin = %{version}-%{release}
@@ -16,10 +16,11 @@ Requires: lutris-license = %{version}-%{release}
 Requires: lutris-python = %{version}-%{release}
 Requires: lutris-python3 = %{version}-%{release}
 Requires: PyYAML
-Requires: pygobject
+Requires: evdev
 Requires: requests
 BuildRequires : PyYAML
 BuildRequires : buildreq-distutils3
+BuildRequires : evdev
 BuildRequires : libevdev-dev
 BuildRequires : pygobject
 BuildRequires : requests
@@ -83,9 +84,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1557771521
-export GCC_IGNORE_WERROR=1
-export LDFLAGS="${LDFLAGS} -fno-lto"
+export SOURCE_DATE_EPOCH=1557810871
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$CFLAGS -fno-lto "
+export FFLAGS="$CFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
