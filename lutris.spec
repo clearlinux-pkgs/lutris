@@ -4,10 +4,10 @@
 #
 Name     : lutris
 Version  : 0.5.2
-Release  : 3
+Release  : 4
 URL      : https://github.com/lutris/lutris/archive/v0.5.2.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.2.tar.gz
-Summary  : Open Gaming Platform
+Summary  : Install and play any video game easily
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
 Requires: lutris-bin = %{version}-%{release}
@@ -15,10 +15,12 @@ Requires: lutris-data = %{version}-%{release}
 Requires: lutris-license = %{version}-%{release}
 Requires: lutris-python = %{version}-%{release}
 Requires: lutris-python3 = %{version}-%{release}
+Requires: Pillow
 Requires: PyYAML
 Requires: evdev
 Requires: pygobject
 Requires: requests
+BuildRequires : Pillow
 BuildRequires : PyYAML
 BuildRequires : buildreq-distutils3
 BuildRequires : evdev
@@ -85,7 +87,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1557811037
+export SOURCE_DATE_EPOCH=1560375812
+export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
 export FFLAGS="$CFLAGS -fno-lto "
