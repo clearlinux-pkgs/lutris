@@ -4,7 +4,7 @@
 #
 Name     : lutris
 Version  : 0.5.2
-Release  : 4
+Release  : 5
 URL      : https://github.com/lutris/lutris/archive/v0.5.2.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.2.tar.gz
 Summary  : Install and play any video game easily
