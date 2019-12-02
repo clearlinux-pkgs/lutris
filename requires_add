@@ -2,4 +2,6 @@
 # picked up automatically. One name per line, no whitespace.
 Pillow
 evdev
+# See https://github.com/clearlinux/distribution/issues/1466
+gnome-desktop
 pygobject

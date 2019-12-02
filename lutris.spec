@@ -4,7 +4,7 @@
 #
 Name     : lutris
 Version  : 0.5.2
-Release  : 5
+Release  : 7
 URL      : https://github.com/lutris/lutris/archive/v0.5.2.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.2.tar.gz
 Summary  : Install and play any video game easily
@@ -18,12 +18,14 @@ Requires: lutris-python3 = %{version}-%{release}
 Requires: Pillow
 Requires: PyYAML
 Requires: evdev
+Requires: gnome-desktop
 Requires: pygobject
 Requires: requests
 BuildRequires : Pillow
 BuildRequires : PyYAML
 BuildRequires : buildreq-distutils3
 BuildRequires : evdev
+BuildRequires : gnome-desktop
 BuildRequires : libevdev-dev
 BuildRequires : pygobject
 BuildRequires : requests
@@ -81,13 +83,14 @@ python3 components for the lutris package.
 
 %prep
 %setup -q -n lutris-0.5.2
+cd %{_builddir}/lutris-0.5.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1560375812
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1575321528
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -100,7 +103,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/lutris
-cp LICENSE %{buildroot}/usr/share/package-licenses/lutris/LICENSE
+cp %{_builddir}/lutris-0.5.2/LICENSE %{buildroot}/usr/share/package-licenses/lutris/842745cb706f8f2126506f544492f7a80dbe29b3
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -269,7 +272,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/lutris/LICENSE
+/usr/share/package-licenses/lutris/842745cb706f8f2126506f544492f7a80dbe29b3
 
 %files python
 %defattr(-,root,root,-)
