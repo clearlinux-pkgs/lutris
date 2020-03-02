@@ -4,10 +4,10 @@
 #
 Name     : lutris
 Version  : 0.5.4
-Release  : 10
+Release  : 11
 URL      : https://github.com/lutris/lutris/archive/v0.5.4.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.4.tar.gz
-Summary  : Install and play any video game easily
+Summary  : Open Gaming Platform
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
 Requires: lutris-bin = %{version}-%{release}
@@ -91,7 +91,8 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575569870
+export SOURCE_DATE_EPOCH=1583172273
+# -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
