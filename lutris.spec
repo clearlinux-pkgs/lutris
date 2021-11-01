@@ -4,7 +4,7 @@
 #
 Name     : lutris
 Version  : 0.5.9.1
-Release  : 27
+Release  : 28
 URL      : https://github.com/lutris/lutris/archive/v0.5.9.1/lutris-0.5.9.1.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.9.1/lutris-0.5.9.1.tar.gz
 Summary  : Video game preservation platform
@@ -139,7 +139,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635751608
+export SOURCE_DATE_EPOCH=1635751704
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
