@@ -4,7 +4,7 @@
 #
 Name     : lutris
 Version  : 0.5.9.1
-Release  : 28
+Release  : 29
 URL      : https://github.com/lutris/lutris/archive/v0.5.9.1/lutris-0.5.9.1.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.9.1/lutris-0.5.9.1.tar.gz
 Summary  : Video game preservation platform
