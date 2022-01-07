@@ -4,7 +4,7 @@
 #
 Name     : lutris
 Version  : 0.5.9.1
-Release  : 29
+Release  : 30
 URL      : https://github.com/lutris/lutris/archive/v0.5.9.1/lutris-0.5.9.1.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.9.1/lutris-0.5.9.1.tar.gz
 Summary  : Video game preservation platform
@@ -17,60 +17,17 @@ Requires: lutris-man = %{version}-%{release}
 Requires: lutris-python = %{version}-%{release}
 Requires: lutris-python3 = %{version}-%{release}
 Requires: Pillow
-Requires: PyYAML
-Requires: astroid
-Requires: certifi
-Requires: cffi
-Requires: chardet
-Requires: cryptography
-Requires: dbus-python
-Requires: entrypoints
 Requires: evdev
 Requires: gnome-desktop
-Requires: idna
-Requires: jeepney
-Requires: keyring
-Requires: lazy-object-proxy
-Requires: mccabe
-Requires: pycairo
-Requires: pycparser
-Requires: pyflakes
 Requires: pygobject
-Requires: python-magic
-Requires: requests
-Requires: secretstorage
-Requires: six
-Requires: urllib3
-Requires: wrapt
-BuildRequires : Pillow
-BuildRequires : PyYAML
-BuildRequires : astroid
 BuildRequires : buildreq-distutils3
 BuildRequires : buildreq-meson
-BuildRequires : certifi
-BuildRequires : cffi
-BuildRequires : chardet
-BuildRequires : cryptography
-BuildRequires : dbus-python
-BuildRequires : entrypoints
-BuildRequires : evdev
-BuildRequires : gnome-desktop
-BuildRequires : idna
-BuildRequires : jeepney
-BuildRequires : keyring
-BuildRequires : lazy-object-proxy
 BuildRequires : libevdev-dev
-BuildRequires : mccabe
-BuildRequires : pycairo
-BuildRequires : pycparser
-BuildRequires : pyflakes
 BuildRequires : pygobject
-BuildRequires : python-magic
-BuildRequires : requests
-BuildRequires : secretstorage
-BuildRequires : six
-BuildRequires : urllib3
-BuildRequires : wrapt
+BuildRequires : pypi(evdev)
+BuildRequires : pypi(python_magic)
+BuildRequires : pypi(pyyaml)
+BuildRequires : pypi(requests)
 
 %description
 Lutris helps you install and play video games from all eras and
@@ -125,6 +82,10 @@ python components for the lutris package.
 Summary: python3 components for the lutris package.
 Group: Default
 Requires: python3-core
+Requires: pypi(evdev)
+Requires: pypi(python_magic)
+Requires: pypi(pyyaml)
+Requires: pypi(requests)
 
 %description python3
 python3 components for the lutris package.
@@ -139,7 +100,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635751704
+export SOURCE_DATE_EPOCH=1641521588
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
