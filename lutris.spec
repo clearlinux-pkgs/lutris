@@ -4,7 +4,7 @@
 #
 Name     : lutris
 Version  : 0.5.9.1
-Release  : 30
+Release  : 31
 URL      : https://github.com/lutris/lutris/archive/v0.5.9.1/lutris-0.5.9.1.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.9.1/lutris-0.5.9.1.tar.gz
 Summary  : Video game preservation platform
@@ -16,10 +16,10 @@ Requires: lutris-license = %{version}-%{release}
 Requires: lutris-man = %{version}-%{release}
 Requires: lutris-python = %{version}-%{release}
 Requires: lutris-python3 = %{version}-%{release}
-Requires: Pillow
-Requires: evdev
 Requires: gnome-desktop
 Requires: pygobject
+Requires: pypi(evdev)
+Requires: pypi(pillow)
 BuildRequires : buildreq-distutils3
 BuildRequires : buildreq-meson
 BuildRequires : libevdev-dev
@@ -100,7 +100,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641521588
+export SOURCE_DATE_EPOCH=1641843348
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
