@@ -1,7 +1,7 @@
 # This file contains additional runtime requirements that did not get
 # picked up automatically. One name per line, no whitespace.
-Pillow
-evdev
+pypi(pillow)
+pypi(evdev)
 # See https://github.com/clearlinux/distribution/issues/1466
 gnome-desktop
 pygobject
