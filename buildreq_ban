@@ -2,3 +2,6 @@
 # undesirable. One entry per line, no whitespace.
 PyGObject
 pypi(pygobject)
+pypi(moddb)
+pypi(pypresence)
+
