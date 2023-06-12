@@ -5,7 +5,7 @@
 #
 Name     : lutris
 Version  : 0.5.13
-Release  : 33
+Release  : 34
 URL      : https://github.com/lutris/lutris/archive/v0.5.13/lutris-0.5.13.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.13/lutris-0.5.13.tar.gz
 Summary  : Video game preservation platform
@@ -29,8 +29,10 @@ BuildRequires : pypi(dbus_python)
 BuildRequires : pypi(distro)
 BuildRequires : pypi(evdev)
 BuildRequires : pypi(lxml)
+BuildRequires : pypi(moddb)
 BuildRequires : pypi(pillow)
 BuildRequires : pypi(protobuf)
+BuildRequires : pypi(pypresence)
 BuildRequires : pypi(pyyaml)
 BuildRequires : pypi(requests)
 # Suppress stripping binaries
@@ -95,8 +97,10 @@ Requires: pypi(dbus_python)
 Requires: pypi(distro)
 Requires: pypi(evdev)
 Requires: pypi(lxml)
+Requires: pypi(moddb)
 Requires: pypi(pillow)
 Requires: pypi(protobuf)
+Requires: pypi(pypresence)
 Requires: pypi(pyyaml)
 Requires: pypi(requests)
 
@@ -116,7 +120,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1686611989
+export SOURCE_DATE_EPOCH=1686613295
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
