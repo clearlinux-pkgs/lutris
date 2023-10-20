@@ -6,10 +6,10 @@
 # autospec commit: f032afc
 #
 Name     : lutris
-Version  : 0.5.13
-Release  : 42
-URL      : https://github.com/lutris/lutris/archive/v0.5.13/lutris-0.5.13.tar.gz
-Source0  : https://github.com/lutris/lutris/archive/v0.5.13/lutris-0.5.13.tar.gz
+Version  : 0.5.14
+Release  : 43
+URL      : https://github.com/lutris/lutris/archive/v0.5.14/lutris-0.5.14.tar.gz
+Source0  : https://github.com/lutris/lutris/archive/v0.5.14/lutris-0.5.14.tar.gz
 Summary  : Video game preservation platform
 Group    : Development/Tools
 License  : GPL-3.0 GPL-3.0+
@@ -103,10 +103,10 @@ python3 components for the lutris package.
 
 
 %prep
-%setup -q -n lutris-0.5.13
-cd %{_builddir}/lutris-0.5.13
+%setup -q -n lutris-0.5.14
+cd %{_builddir}/lutris-0.5.14
 pushd ..
-cp -a lutris-0.5.13 buildavx2
+cp -a lutris-0.5.14 buildavx2
 popd
 
 %build
@@ -114,7 +114,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1697578769
+export SOURCE_DATE_EPOCH=1697823765
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
@@ -179,10 +179,13 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/share/lutris/json/dgen.json
 /usr/share/lutris/json/frotz.json
 /usr/share/lutris/json/melonds.json
+/usr/share/lutris/json/mgba.json
 /usr/share/lutris/json/microm8.json
 /usr/share/lutris/json/minivmac.json
 /usr/share/lutris/json/pcem.json
 /usr/share/lutris/json/ppsspp.json
+/usr/share/lutris/json/rosaliesmupengui.json
+/usr/share/lutris/json/ruffle.json
 /usr/share/lutris/json/sheepshaver.json
 /usr/share/lutris/json/speccy.json
 /usr/share/lutris/json/stella.json
