@@ -7,7 +7,7 @@
 #
 Name     : lutris
 Version  : 0.5.17
-Release  : 46
+Release  : 47
 URL      : https://github.com/lutris/lutris/archive/v0.5.17/lutris-0.5.17.tar.gz
 Source0  : https://github.com/lutris/lutris/archive/v0.5.17/lutris-0.5.17.tar.gz
 Summary  : Video game preservation platform
